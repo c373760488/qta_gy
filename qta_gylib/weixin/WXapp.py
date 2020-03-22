@@ -5,7 +5,7 @@ class WXApp(AndroidApp):
     '''安卓Demo App类
     '''
     # 包名,必须定义
-    package_name = 'com.qta.qt4a.demo'
+    package_name = 'com.tencent.mm'
 
     def __init__(self, device=None, clear_state=True, kill_process=True, net_type='wifi', start_extra_params={}):
         '''
@@ -28,6 +28,6 @@ class WXApp(AndroidApp):
     def login(self, acc, pwd):
         '''登录demo
         '''
-        from .login import LoginPanel
+        from weixin.login import LoginPanel
         login_panel = LoginPanel(self)
         login_panel.login(acc, pwd)
