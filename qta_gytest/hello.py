@@ -3,20 +3,24 @@
 '''
 #2020/03/21 QTAF自动生成
 
-from qta_gylib.testcase import Qta_gyTestCase
 
-class HelloTest(Qta_gyTestCase):
+from qta_gylib.weixin.WXapp import WXApp
+from qta_gylib.weixin.wx_basepage import GYTestBase
+
+
+class HelloTest(GYTestBase):
     '''示例测试用例
     '''
     owner = "coye"
     timeout = 5
-    priority = Qta_gyTestCase.EnumPriority.High
-    status = Qta_gyTestCase.EnumStatus.Design
+    priority = GYTestBase.EnumPriority.High
+    status = GYTestBase.EnumStatus.Design
     tags= "test_eg"
     
     def run_test(self):
-        app=Qta_gyTestCase()
-        app.login()
+        device = self.acquire_device()
+        app = WXApp(device)
+        # app.login(acc, pwd)
     
 if __name__ == '__main__':
     HelloTest().debug_run()
