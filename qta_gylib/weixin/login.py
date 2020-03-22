@@ -5,7 +5,7 @@ from qt4a.qpath import QPath
 class LoginPanel(Window):
     '''登录界面
     '''
-    Activity = 'com.qta.qt4a.demo.MainActivity'  # 登录界面
+    Activity = 'com.tencent.mm/.plugin.account.ui.LoginPasswordUI'  # 登录界面
 
     def __init__(self, demoapp):
         super(LoginPanel, self).__init__(demoapp)
