@@ -1,6 +1,8 @@
 from qt4a.androidapp import AndroidApp
 
 
+
+
 class WXApp(AndroidApp):
     '''安卓Demo App类
     '''
@@ -28,6 +30,6 @@ class WXApp(AndroidApp):
     def login(self, acc, pwd):
         '''登录demo
         '''
-        from weixin.login import LoginPanel
+        from qta_gylib.weixin.login import LoginPanel
         login_panel = LoginPanel(self)
         login_panel.login(acc, pwd)
