@@ -24,7 +24,7 @@ class WXApp(AndroidApp):
             self.device.kill_process(self.package_name)  # 杀死已有进程
         if clear_state == True:
             self.device.clear_data(self.package_name)  # 清除包数据
-        self.device.adb.start_activity('%s/%s.MainActivity' % (self.package_name, self.package_name),
+        self.device.adb.start_activity('%s/.app.WeChatSplashActivity' % (self.package_name),
                                        extra=start_extra_params)
 
     def login(self, acc, pwd):
@@ -32,4 +32,5 @@ class WXApp(AndroidApp):
         '''
         from qta_gylib.weixin.login import LoginPanel
         login_panel = LoginPanel(self)
-        login_panel.login(acc, pwd)
+        login_panel.login()
+        login_panel.login_phone(acc, pwd)
