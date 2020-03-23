@@ -18,8 +18,8 @@ class HelloTest(GYTestBase):
     tags= "test_eg"
     
     def run_test(self):
-        acc="188629357264"
-        pwd="feifei911"
+        acc=""
+        pwd=""
         device = self.acquire_device()
         app = WXApp(device)
         app.login(acc, pwd)
